@@ -1,0 +1,38 @@
+<html lang="en">
+
+<th:block th:fragment="js">
+
+  <!-- Bootstrap core JavaScript-->
+  <!-- <script src="vendor-admin/jquery/jquery.min.js"></script> -->
+  <script th:src="@{/assets/vendor-admin/jquery/jquery.min.js}"></script>
+  <script th:src="@{/assets/vendor-admin/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+  <!-- Core plugin JavaScript Pas la peine-->
+  <!-- <script src="vendor-admin/jquery-easing/jquery.easing.min.js"></script> -->
+
+  <!-- Custom scripts for all pages-->
+  <script th:src="@{/assets/js/sb-admin-2.min.js}"></script>
+
+  <!-- Page level plugins -->
+  <script th:src="@{/assets/vendor-admin/datatables/jquery.dataTables.min.js}"></script>
+  <script th:src="@{/assets/vendor-admin/datatables/dataTables.bootstrap4.min.js}"></script>
+
+  <!-- Page level custom scripts -->
+  <script th:src="@{/assets/js/demo/datatables-demo.js}"></script>
+
+  <script type="text/javascript">
+      $(document).ready(function () {
+        $(".btn-delete").on("click", function (e) {
+          e.preventDefault();
+          alert('ok');
+          link = $(this);
+
+          employeNom = link.attr("employeNom");
+          $("#yesBtn").attr("href", link.attr("href"));
+          $("#confirmText").html("Do you want to delete the Employe \<strong\>" + employeNom + "\<\/strong\>?");
+          $("#confirmModal").modal();
+        });
+      });
+  </script>
+</th:block>
+</html>
