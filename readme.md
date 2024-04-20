@@ -4,5 +4,5 @@
 
 - Installez Java 17 sur votre machine
 
-- Ouvrez le projet account-service avec un IDE : executez mvn clean package -DskipTests=true
+- Ouvrez le projet un IDE : executez mvn clean package -DskipTests=true
 
